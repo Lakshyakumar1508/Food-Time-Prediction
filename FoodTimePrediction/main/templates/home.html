@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Time Prediction</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 38px;
+            color: #444;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 55px;
+            color: #623a3a;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .description {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Button Styling */
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #623a3a;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4e2d2d;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #623a3a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to</h2>
+    <h1>Food Time Prediction System</h1>
+    <p class="description">
+        Our system predicts the estimated delivery time based on various factors such as distance, traffic conditions, 
+        weather, and order priority. Get your food delivered on time with our smart prediction model!
+    </p>
+    <form action="predict">
+        <div class="btn-container">
+            <input type="submit" value="START PREDICTION">
+        </div>
+    </form>
+    
+    <div class="footer">
+        Developed by <a href="#">Lakshya Kumar</a> | &copy; 2025 Food Prediction Inc.
+    </div>
+</body>
+</html>

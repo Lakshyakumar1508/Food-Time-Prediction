@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color:azure;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Form Container */
+        .main {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 480px;
+            text-align: center;
+        }
+
+        /* Table Layout */
+        table {
+            width: 100%;
+            border-spacing: 12px;
+        }
+
+        td {
+            text-align: left;
+            width: 50%;
+            vertical-align: top;
+        }
+
+        p {
+            margin: 5px 0;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Input Fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #f9f9f9;
+            transition: all 0.3s;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            border-color: #d48c00;
+            box-shadow: 0 0 8px rgba(212, 140, 0, 0.5);
+        }
+
+        /* Button Styling */
+        .result {
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #623a3a;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4e2d2d;
+            transform: scale(1.05);
+        }
+
+        .row {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Kindly Fill the Form</h2>
+    <form action="result" method="get">
+        <div class="main">
+            <table>
+                <tr>
+                    <td>
+                        <p>Distance</p>
+                        <input type="text" name="n1" placeholder="Enter distance">
+                    </td>
+                    <td>
+                        <p>Traffic Conditions</p>
+                        <input type="text" name="n2" placeholder="Enter traffic condition (0-2)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Weather Conditions</p>
+                        <input type="text" name="n3" placeholder="Enter weather condition (0-3)">
+                    </td>
+                    <td>
+                        <p>Delivery Person Experience</p>
+                        <input type="text" name="n4" placeholder="Enter experience level (0-10)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Rush Hour</p>
+                        <input type="text" name="n5" placeholder="1/0">
+                    </td>
+                    <td>
+                        <p>Order Priority</p>
+                        <input type="text" name="n6" placeholder="0/1/2">
+                    </td>
+                </tr>
+            </table>
+            <div class="result">
+                <input type="submit" value="Predict">
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <h2>{{result2}}</h2>
+    </div>
+</body>
+</html>
